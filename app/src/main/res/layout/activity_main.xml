@@ -4,15 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#00000000"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".MainActivity" />
 
+    <ImageButton
+        android:id="@+id/btHoteles"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFE600"
+        android:onClick="clickHoteles"
+        android:scaleType="fitCenter"
+        android:src="@drawable/baseline_hotel_24"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:src="@drawable/baseline_hotel_24"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/btRestaurant"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFE600"
+        android:onClick="clickRestaurant"
+        android:scaleType="fitCenter"
+        android:src="@drawable/baseline_restaurant_24"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btHoteles"
+        tools:src="@drawable/baseline_restaurant_24"
+        tools:visibility="visible" />
+
+    <ImageButton
+        android:id="@+id/btShopping"
+        android:layout_width="58dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="24dp"
+        android:background="#FFE600"
+        android:onClick="clickShopping"
+        android:scaleType="fitCenter"
+        android:src="@drawable/baseline_shopping_bag_24"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btRestaurant"
+        tools:src="@drawable/baseline_shopping_bag_24"
+        tools:visibility="visible" />
 </androidx.constraintlayout.widget.ConstraintLayout>
